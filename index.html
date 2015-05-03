@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notification Top Bar</title>
+    <link rel="stylesheet" type="text/css" href="css/notification-default.css"/>
+    <link rel="stylesheet" type="text/css" href="css/notification-style-bar.css"/>
+</head>
+<body>
+<h1>Notifications:</h1>
+<button onclick="notify('success')">Success</button>
+<button onclick="notify('warning')">Warning</button>
+<button onclick="notify('error')">Error</button>
+<script src="js/notification.js"></script>
+<script>
+    var options = {
+        message: '<p>Your preferences have been saved successfully. See all your settings in your <a href="#">profile overview</a>.</p>',
+        ttl: 10000,
+        onClose: function () {
+            console.log('notification done');
+        }
+    };
+
+    var notify = function (type) {
+        options.type = type;
+        var notification = new Notification(options);
+
+        // show the notification
+        notification.show();
+    };
+
+</script>
+</body>
+</html>
