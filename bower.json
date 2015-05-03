@@ -1,0 +1,22 @@
+{
+    "name": "simple-notify",
+    "version": "0.0.1",
+    "homepage": "https://github.com/guillaumevincent/simple-notify",
+    "authors": [
+        "Codrops"
+    ],
+    "description": "simple notification bar",
+    "main": "js/notification.js",
+    "keywords": [
+        "notification",
+        "notification-bar"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}
